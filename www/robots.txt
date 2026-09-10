@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /cuenta.html
+Disallow: /api/
+
+Sitemap: https://vintagestore1978.cloudsolutions.cl/sitemap.xml

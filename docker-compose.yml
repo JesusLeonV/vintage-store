@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vintage-store-web
+    restart: unless-stopped
+    ports:
+      - "8090:80"
+    volumes:
+      - ./www:/usr/share/nginx/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - vintage-network
+
+networks:
+  vintage-network:
+    driver: bridge
